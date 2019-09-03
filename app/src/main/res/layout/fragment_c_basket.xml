@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".Customer.Fragments.C_home_fragment">
+
+  <!-- TODO: Update blank fragment layout -->
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+      android:layout_width="300dp"
+      android:layout_height="200dp"
+      android:layout_gravity="center"
+      android:layout_marginTop="200dp"
+      android:scaleType="centerCrop"
+      android:src="@drawable/farmer_and_tractor" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:layout_marginLeft="45dp"
+      android:layout_marginTop="40dp"
+      android:textStyle="bold"
+      android:text="Do what you can, with what you have, where you are ..."/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="50dp"
+      android:gravity="center_vertical"
+      android:layout_marginTop="9dp"
+      android:text="Your basket is empty.Add something from Menu" />
+  </LinearLayout>
+
+</FrameLayout>

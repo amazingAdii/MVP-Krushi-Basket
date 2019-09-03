@@ -1,0 +1,101 @@
+{
+  "project_info": {
+    "project_number": "116321154537",
+    "firebase_url": "https://mvp-krushi-basket.firebaseio.com",
+    "project_id": "mvp-krushi-basket",
+    "storage_bucket": "mvp-krushi-basket.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116321154537:android:357bc2696eddac41",
+        "android_client_info": {
+          "package_name": "com.example.model"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-4YdJkkTPWCBxLHMArh--BwbpdPJg9VI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116321154537-facmjcstiu4s8jg59oirho82g18mfr2q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116321154537:android:03117063b6452bf1",
+        "android_client_info": {
+          "package_name": "com.example.pubgwala"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116321154537-fsftbauq3mmm4bgokqp81udr5n6aahkp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pubgwala",
+            "certificate_hash": "0a7b4d87bdc542d5d731d9200b89c80eac4cc66f"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-4YdJkkTPWCBxLHMArh--BwbpdPJg9VI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116321154537-facmjcstiu4s8jg59oirho82g18mfr2q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116321154537:android:0b0107ce9c75ba12",
+        "android_client_info": {
+          "package_name": "com.maddy.adiii.mvpkrushibasket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116321154537-r6pp99agvtn70s6goeu43apde4fbgmkf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.maddy.adiii.mvpkrushibasket",
+            "certificate_hash": "67772d7987e88c3d9a243e3877ff2e059253b0ee"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-4YdJkkTPWCBxLHMArh--BwbpdPJg9VI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116321154537-facmjcstiu4s8jg59oirho82g18mfr2q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
