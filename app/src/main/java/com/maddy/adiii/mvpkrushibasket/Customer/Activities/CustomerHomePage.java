@@ -1,6 +1,9 @@
 package com.maddy.adiii.mvpkrushibasket.Customer.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
@@ -81,4 +84,22 @@ public class CustomerHomePage extends AppCompatActivity {
 		fragmentTransaction.commit();
 	}
 	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.customer_homepage_menu, menu);
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch(item.getItemId()){
+			case R.id.scanner :
+				startActivity(new Intent(this, ScannerActivity.class));
+				return true;
+			default:
+				return super.onOptionsItemSelected(item);
+		}
+		
+	}
 }

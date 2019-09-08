@@ -1,20 +1,17 @@
 package com.maddy.adiii.mvpkrushibasket;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -97,6 +94,8 @@ public class login_reg extends AppCompatActivity {
                 final String Rmobno = regMobno.getText().toString();
                 final String Raddress = regAddres.getText().toString();
 
+                
+                //TODO: Check conditions here for empty name, mobno, addr
                 if (Remail.isEmpty() || Rpassword.isEmpty()) {
                     show_message("Some thing went wrong");
 
@@ -138,10 +137,11 @@ public class login_reg extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            //TODO: change child name
                             DatabaseReference mCurrentData = mCustomerDataRef.child(mAuth.getUid());
                             mCurrentData.child("cName").setValue(Rname);
-                            mCurrentData.child("cName").setValue(Remail);
-                            mCurrentData.child("cName").setValue(Rpassword);
+                            mCurrentData.child("cEmail").setValue(Remail);
+                            //mCurrentData.child("c").setValue(Rpassword);
                             mCurrentData.child("cName").setValue(Rmobno);
                             mCurrentData.child("cName").setValue(Raddress);
 
