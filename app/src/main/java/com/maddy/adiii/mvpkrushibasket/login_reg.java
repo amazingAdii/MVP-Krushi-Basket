@@ -3,6 +3,7 @@ package com.maddy.adiii.mvpkrushibasket;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -46,9 +47,10 @@ public class login_reg extends AppCompatActivity {
         getIds();
 
         mAuth = FirebaseAuth.getInstance();
-//        if(mAuth.getCurrentUser() != null){
-//            //TODO: Intent to CustomerHomePage
-//        }
+        if(mAuth.getCurrentUser() != null){
+            Intent myIntent = new Intent(login_reg.this, MainActivity.class);
+            startActivity(myIntent);
+      }
 
         mCustomerDataRef = FirebaseDatabase.getInstance().getReference().child("Customer Details");
 
@@ -91,13 +93,15 @@ public class login_reg extends AppCompatActivity {
 
                 final String Remail = login_email.getText().toString();
                 final String Rpassword = login_pass.getText().toString();
-
+                final String Rname = nameInput.getText().toString();
+                final String Rmobno = regMobno.getText().toString();
+                final String Raddress = regAddres.getText().toString();
 
                 if (Remail.isEmpty() || Rpassword.isEmpty()) {
                     show_message("Some thing went wrong");
 
                 } else {
-                    createuserAcc(Remail, Rpassword);
+                    createuserAcc(Remail, Rpassword, Rname , Rmobno ,Raddress);
                 }
             }
 
@@ -111,7 +115,7 @@ public class login_reg extends AppCompatActivity {
                 final String Remail = login_email.getText().toString();
                 final String Rpassword = login_pass.getText().toString();
 
-                if (Remail.isEmpty() || Rpassword.isEmpty()) {
+                if (Remail.isEmpty() || Rpassword.isEmpty() ) {
                     show_message("Some thing went wrong");
 
                 } else {
@@ -127,19 +131,22 @@ public class login_reg extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
     }
 
-    private void createuserAcc(String Remail, String Rpassword) {
+    private void createuserAcc(final String Remail, final String Rpassword, final String Rname , final String Raddress , final String Rmobno) {
 
         mAuth.createUserWithEmailAndPassword(Remail, Rpassword)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            String name = nameInput.getText().toString();
-                            //TODO: get values and set value i database
+                            DatabaseReference mCurrentData = mCustomerDataRef.child(mAuth.getUid());
+                            mCurrentData.child("cName").setValue(Rname);
+                            mCurrentData.child("cName").setValue(Remail);
+                            mCurrentData.child("cName").setValue(Rpassword);
+                            mCurrentData.child("cName").setValue(Rmobno);
+                            mCurrentData.child("cName").setValue(Raddress);
 
-                            mCustomerDataRef.child("cName").setValue(name);
-                            show_message("Account Created");
-                            //TODO: Intent to CustomerHomepAge
+                            Intent myIntent = new Intent(login_reg.this, MainActivity.class);
+                            startActivity(myIntent);
 
                         } else {
 
