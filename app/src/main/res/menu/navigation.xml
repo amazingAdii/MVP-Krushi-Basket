@@ -13,17 +13,19 @@
 
   <item
     android:id="@+id/navigation_search"
-    android:icon="@drawable/ic_notifications_black_24dp"
+    android:icon="@drawable/ic_search_icon"
     android:title="Search"/>
 
-  <item
-    android:id="@+id/navigation_offers"
-    android:icon="@drawable/ic_notifications_black_24dp"
-    android:title="Offers"/>
+    <item
+        android:id="@+id/navigation_basket"
+        android:icon="@drawable/ic_basket_icon"
+        android:title="Basket"/>
 
-  <item
-    android:id="@+id/navigation_basket"
-    android:icon="@drawable/ic_notifications_black_24dp"
-    android:title="Basket"/>
+    <item
+    android:id="@+id/navigation_offers"
+    android:icon="@drawable/ic_account_icon"
+    android:title="Account "/>
+
+
 
 </menu>
