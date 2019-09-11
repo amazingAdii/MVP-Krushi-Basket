@@ -6,10 +6,10 @@
   tools:context=".Customer.Fragments.C_home_fragment">
 
   <!-- TODO: Update blank fragment layout -->
-  <android.support.v7.widget.RecyclerView
-    android_id="@+id/rv_customer_buy_list"
-    android_layout_width="match_parent"
-    android_layout_height="wrap_content"
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rv_customer_buy_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     />
 
 </FrameLayout>
