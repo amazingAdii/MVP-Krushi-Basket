@@ -7,4 +7,10 @@
       android:title="Scanner"
       android:iconTint="@color/whiteColor"
       app:showAsAction="always" />
+    <item
+        android:id="@+id/ic_search"
+        android:icon="@drawable/ic_search_icon"
+        android:title="Search"
+        android:iconTint="@color/whiteColor"
+        />
 </menu>

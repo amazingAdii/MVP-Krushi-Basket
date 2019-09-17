@@ -43,9 +43,7 @@ public class CustomerHomePage extends AppCompatActivity {
 				case R.id.navigation_categories:
 					changeFragment(categoryFragment);
 					return true;
-				case R.id.navigation_search:
-					changeFragment(searchFragment);
-					return true;
+
 				case R.id.navigation_offers:
 					changeFragment(offersFragment);
 					return true;

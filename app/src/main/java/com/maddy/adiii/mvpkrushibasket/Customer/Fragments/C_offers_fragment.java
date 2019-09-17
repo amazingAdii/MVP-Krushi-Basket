@@ -16,8 +16,8 @@ import com.maddy.adiii.mvpkrushibasket.login_reg;
 public class C_offers_fragment extends Fragment {
 	
 	private View rootView;
-	private Button GotoLogin;
-	
+	/*private Button GotoLogin;
+	*/
 	public C_offers_fragment(){
 	
 	}
@@ -26,8 +26,10 @@ public class C_offers_fragment extends Fragment {
 	@Override
 	public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
 	        @Nullable Bundle savedInstanceState) {
-		
-		rootView = inflater.inflate(R.layout.fragment_c_offers, container, false);
+
+        rootView = inflater.inflate(R.layout.fragment_c_offers, container, false);
+
+		/*rootView = inflater.inflate(R.layout.fragment_c_offers, container, false);
 
 		GotoLogin=(Button)rootView.findViewById(R.id.btnGotologin);
 		GotoLogin.setOnClickListener(new View.OnClickListener() {
@@ -36,8 +38,8 @@ public class C_offers_fragment extends Fragment {
 				Intent i= new Intent(getContext(), login_reg.class);
 				startActivity(i);
 			}
-		});
+		});*/
 		return rootView;
 	}
-	
+
 }
