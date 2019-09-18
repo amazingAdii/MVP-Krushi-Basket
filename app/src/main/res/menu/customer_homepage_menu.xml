@@ -12,5 +12,6 @@
         android:icon="@drawable/ic_search_icon"
         android:title="Search"
         android:iconTint="@color/whiteColor"
+      app:showAsAction="always"
         />
 </menu>

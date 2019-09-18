@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.maddy.adiii.mvpkrushibasket">
 
+    <meta-data
+      android:name="com.google.android.gms.vision.DEPENDENCIES"
+      android:value="barcode"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
